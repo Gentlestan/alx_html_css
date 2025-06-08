@@ -1,4 +1,274 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  background: black;
   color: #fff;
+  font-family: "Source Sans 3", sans-serif;
+  font-style: normal;
+}
+
+header,
+main,
+section,
+footer,
+.top-presenter,
+.top-background {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  box-sizing: border-box;
+}
+
+.top-background {
+  background-image: url("images/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no repeat;
+  padding: 2rem 1.5rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  gap: 1rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+.nav li {
+  list-style: none;
+}
+.nav a {
+  text-decoration: none;
+  color: inherit;
+}
+.hero-text {
+  text-align: center;
+  font-weight: 700;
+}
+.hero-text > h1 {
+  font-size: 7.5rem;
+  margin-bottom: 0;
+}
+.hero-text > p {
+  font-size: 1.25rem;
+  margin-top: 0;
+  word-spacing: 2rem;
+}
+.hero-text > button {
+  background: #c271ff;
+  color: #fff;
+  font-size: 0.875rem;
+  padding: 1rem 0.5rem;
+  border-radius: 16px;
+  border-color: none;
+}
+.learn-pros > h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.learn-pros > h2 span {
+  color: #c271ff;
+}
+.learn-pros-portraits {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.portraits-info > h3,
+.portraits-info > p {
+  text-align: center;
+}
+.portraits-info > h3 {
+  font-weight: 900;
+  font-size: 1.125rem;
+}
+.portraits-info > p {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.presenter-container {
+  background: #c271ff;
+  width: 100%;
+  max-width: 1440px;
+}
+.presenter-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  width: 80%;
+}
+.presenter-quote-name > p {
+  padding-left: 2.5rem;
+}
+.presenter-quote-name > blockquote {
+  font-weight: 400;
+  font-size: 1.375rem;
+}
+.presenter-quote-name > .author {
+  font-weight: 700;
+  font-size: 1.375rem;
+  margin-bottom: 0;
+}
+.presenter-quote-name > .weather {
+  margin-top: 0;
+  font-style: italic;
+  font-size: 1.375rem;
+}
+
+.tutorial > h2 {
+  color: #071629;
+  text-align: center;
+  padding: 2rem 0;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.tutorial > h2 span {
+  color: #c271ff;
+}
+.tutorial-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+.tutorial-details > h3 {
+  color: #071629;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.tutorial-details > p {
+  color: #07162980;
+  font-size: 0.875rem;
+  width: 80%;
+  margin-bottom: 0;
+}
+.tutorial-avatar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: black;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.tutorial-avatar > img {
+  width: 30px;
+  height: 30px;
+}
+.tutorial-avatar > h3 {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #c271ff;
+}
+.tutorial-rating-container {
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-top: 0;
+  padding-top: 0;
+}
+.tutorial-rating-container > p {
+  color: #c271ff;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.tutorial-rating {
+  display: flex;
+  gap: 0.2rem;
+}
+.membership {
+  background: #071629;
+  border: 2px solid;
+}
+.membership-info {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.membership-info > h2 {
+  text-align: center;
+  padding-top: 2rem;
+}
+.membership-info > h2 span {
+  color: #c271ff;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.membership-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.membership-container-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+.membership-container-info > p {
+  text-align: center;
+  width: 80%;
+}
+.membership-button {
+  background: #c271ff;
+  padding: 1rem 0.5rem;
+  border: 1px solid red;
+  margin-top: 1rem;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.frequent-question {
+  color: #071629;
+}
+.frequent-question > h2 {
+  text-align: center;
+}
+.frequent-question-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}
+.frequent-question-content {
+  margin: 0 auto;
+  width: 60%;
+}
+.frequent-question-content > h3 {
+  font-weight: 700;
+  font-size: 1rem;
+}
+.frequent-question-content > p {
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+footer {
+  background: #071629;
+  text-align: center;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 4rem;
+}
+.footer-container > .socials {
+  display: flex;
+  gap: 1rem;
+}
+footer > p {
+  font-weight: 400;
+  font-size: 0.75rem;
 }
