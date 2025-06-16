@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* optional but recommended */
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("./fonts/SourceSansPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("./fonts/SourceSansPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+header {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  background-image: url(images/background-header.png);
+  background-size: cover;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid red;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+nav a:hover,
+nav a:active {
+  color: #ff6565;
+}
+.menu {
+  display: flex;
+  gap: 15px;
+}
+.menu li {
+  list-style: none;
+}
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+@media (min-width: 480px) {
+  /* .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+  .menu {
+    display: flex;
+  }*/
+}
