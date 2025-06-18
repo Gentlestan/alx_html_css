@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* optional but recommended */
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("./fonts/SourceSansPro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url("./fonts/SourceSansPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+header,
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  background-image: url(images/background-header.png);
+  background-size: cover;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+nav a:hover,
+nav a:active {
+  color: #ff6565;
+}
+.menu {
+  display: flex;
+  gap: 15px;
+}
+.menu li {
+  list-style: none;
+}
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+.btn {
+  background: #ff6565;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 1rem;
+}
+.hero {
+  text-align: center;
+  padding: 2rem 0.5rem;
+  color: #fff;
+}
+.hero > h1 {
+  font-size: 2rem;
+  font-style: bold;
+  margin-top: 3rem;
+}
+.hero > p {
+  font-size: 1rem;
+  font-style: bold;
+}
+.hero > button {
+  margin-top: 1rem;
+}
+.what-we-do {
+  font-size: 1rem;
+  font-style: regular;
+}
+.what-we-do > p {
+  margin: 3rem 0;
+  padding: 0 0.5rem;
+}
+.media-grid {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 0.875rem;
+}
+.info-cards > p {
+  margin-top: 5px;
+}
+
+@media (min-width: 481px) and (max-width: 1000px) {
+  .hero,
+  .what-we-do {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .media-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    /*flex-direction: row;*/
+  }
+}
+@media (min-width: 1001px) {
+  .hero,
+  .what-we-do {
+    margin: 0 auto;
+    width: 70%; /* or max-width: 1000px; */
+  }
+  .media-grid {
+    flex-direction: row;
+  }
+}

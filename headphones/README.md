@@ -1,43 +1,53 @@
-# 🎧 Headphones Company Website
+# ALX Front-End Project: Week 7 - Headphones Website
 
-    This is a **Week-7 project** for the **ALX Software Engineering Program**. The project is built using **HTML and CSS**, and it showcases a responsive landing page for a fictional headphone company.
+This repository contains the HTML, CSS, and JavaScript files for a **responsive marketing website** for a fictional headphones brand. This project is part of the **ALX Front-End Curriculum - Week 7**, and focuses on building a mobile-first landing page with interactive elements.
 
-## Project Features
+---
 
-## Responsive Navigation Menu
+## Project File: `8-index.html`
 
-- Three main sections:
-  - `What We Do`
-  - `Our Results`
-  - `Contact Us`
-- On screens **≤ 480px**, the menu becomes a **hamburger** icon that toggles the navigation links.
+### Task Description
 
-- 🖼️ **Header with Background Image**
+Build a fully responsive one-page website that promotes a headphone product or brand, including features like mobile navigation toggles, responsive image grids, floating label forms, and styled content sections.
 
-  - Hero section includes a full-width background image.
+---
 
-- 📄 **Main Section**
+### Requirements
 
-  - Highlights company offerings and results.
-  - Structured semantic HTML using `<main>`.
+#### Header Section
 
-- 📫 **Contact Us Section**
+- Contains a `<nav>` with:
+  - A company logo image.
+  - A hamburger menu (`.hamburger`) that toggles visibility of the navigation menu on mobile.
+  - A hidden (mobile-first) navigation list (`.menu`) that becomes visible via JavaScript interaction.
+- Includes a hero banner with:
+  - An `<h1>` headline.
+  - A short description paragraph.
+  - A call-to-action button.
+  - Additional product-related text.
 
-  - Simple contact form or contact information section.
+#### What We Do Section (`#what-we-do`)
 
-- 🔚 **Footer Section**
-  - Clean and minimal footer with relevant info or copyright.
+- A `<section>` introducing the brand's capabilities.
+- Includes a paragraph description.
+- A responsive media grid (`.media-grid`) displaying four icon-based cards with descriptions.
 
-## 💻 Technologies Used
+#### Our Results Section (`#results`)
 
-- HTML5
-- CSS3
-- Responsive Design using Media Queries
+- A results section with a background image and white text.
+- Contains descriptive text and a set of dot icons arranged in a responsive grid (`.result-grid`).
+- Includes hover effects on the result container (e.g., slight rotation).
 
-## 📱 Responsive Design
+#### Contact Us Section (`#contact`)
 
-- Designed to be **mobile-first**.
-- Layout adapts gracefully across screen sizes.
-- **Menu toggles into a hamburger icon** on devices with a screen width of **480px or less**.
+- A `<form>` that collects:
+  - **Name** (text input)
+  - **Email** (email input)
+  - **Message** (textarea)
+- Inputs use **floating labels**: labels are positioned inside the inputs and move above on focus or when filled.
+- A submit button styled as a call-to-action.
 
-## 🧩 File Structure
+#### Footer
+
+- Displays logo and social media icons (Facebook, Twitter, Instagram).
+- Includes a copyright:
