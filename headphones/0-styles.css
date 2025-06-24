@@ -33,7 +33,7 @@ header {
 nav {
   display: flex;
   justify-content: space-between;
-  border: 2px solid red;
+  flex-direction: row-reverse;
   align-items: center;
   padding: 1rem 2rem;
 }
@@ -42,17 +42,76 @@ nav a:active {
   color: #ff6565;
 }
 .menu {
-  display: flex;
+  display: none;
   gap: 15px;
 }
 .menu li {
   list-style: none;
 }
+
 .menu a {
   text-decoration: none;
   color: #fff;
-  font-size: 1.3rem;
+  font-size: 0.75rem;
   font-weight: bold;
+}
+/*.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 10px;
+}*/
+
+.hamburger {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 10px;
+  width: 30px; /* keep consistent */
+  height: 24px; /* roughly 3 bars height */
+  justify-content: center;
+  align-items: center;
+  background: transparent; /* keep default */
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  transition: opacity 0.3s ease;
+}
+.hamburger > .span-size {
+  width: 20px;
+}
+/* Hidden X icon by default */
+.close-icon {
+  display: none;
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  pointer-events: none;
+}
+/* ON HOVER: Hamburger transforms into dark circle with X */
+.hamburger:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Hide hamburger bars */
+.hamburger:hover span {
+  opacity: 0;
+}
+
+/* Show the X icon on logo hover */
+.hamburger:hover .close-icon {
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .btn {
   background: #ff6565;
@@ -66,16 +125,17 @@ nav a:active {
   text-align: center;
   padding: 2rem 0;
   color: #fff;
-  border: 2px solid blue;
 }
 .hero > h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-style: bold;
   margin-top: 3rem;
 }
 .hero > p {
   font-size: 1rem;
-  font-style: bold;
+  font-weight: 400;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .hero > button {
   margin-top: 1rem;
@@ -85,17 +145,28 @@ nav a:active {
     margin: 0 auto;
     width: 80%;
   }
+  .menu {
+    display: flex;
+  }
+  .hamburger {
+    display: none;
+  }
+  nav {
+    flex-direction: row;
+  }
 }
 @media (min-width: 769px) {
   .hero {
     margin: 0 auto;
     width: 60%;
   }
-  /* .hamburger {
-    display: flex;
-    cursor: pointer;
+  .hamburger {
+    display: none;
   }
   .menu {
     display: flex;
-  }*/
+  }
+  nav {
+    flex-direction: row;
+  }
 }

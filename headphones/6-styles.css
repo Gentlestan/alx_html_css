@@ -36,6 +36,7 @@ header {
 }
 nav {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
@@ -45,7 +46,7 @@ nav a:active {
   color: #ff6565;
 }
 .menu {
-  display: flex;
+  display: none;
   gap: 15px;
 }
 .menu li {
@@ -57,6 +58,57 @@ nav a:active {
   font-size: 0.75rem;
   font-weight: bold;
 }
+.hamburger {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 10px;
+  width: 30px; /* keep consistent */
+  height: 24px; /* roughly 3 bars height */
+  justify-content: center;
+  align-items: center;
+  background: transparent; /* keep default */
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  transition: opacity 0.3s ease;
+}
+.hamburger > .span-size {
+  width: 20px;
+}
+.close-icon {
+  display: none;
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  pointer-events: none;
+}
+/* ON HOVER: Hamburger transforms into dark circle with X */
+.hamburger:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Hide hamburger bars */
+.hamburger:hover span {
+  opacity: 0;
+}
+
+/* Show the X icon on logo hover */
+.hamburger:hover .close-icon {
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .btn {
   background: #ff6565;
   color: #fff;
@@ -99,6 +151,7 @@ nav a:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 .info-cards {
   display: flex;
@@ -282,6 +335,15 @@ footer > p {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
+  .hamburger {
+    display: none;
+  }
+  .menu {
+    display: flex;
+  }
+  nav {
+    flex-direction: row;
+  }
 }
 
 @media (min-width: 1001px) {
@@ -315,5 +377,14 @@ footer > p {
   }
   .img-logo {
     display: none;
+  }
+  .hamburger {
+    display: none;
+  }
+  .menu {
+    display: flex;
+  }
+  nav {
+    flex-direction: row;
   }
 }
